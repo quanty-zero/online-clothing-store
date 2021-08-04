@@ -1,0 +1,36 @@
+// USER VARIABLES SECTION //
+
+$accent: #b6b7bd; // Accent Color
+$second-accent: #c9c9c9;
+$textcolor: #1c1f26; // Text Color
+
+// IMPORT SECTION
+
+// BOOTSTRAP
+
+// Необходимые
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// Включите здесь переопределения пользовательских переменных по умолчанию
+@import "_bootstrap-overriding";
+
+// Необязательные
+@import "node_modules/bootstrap/scss/reboot";
+
+// MODULES
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+  @font-face {
+    font-family: $fname;
+    font-style: $fstyle;
+    font-weight: $fweight;
+    src: url($furl) format('woff2');
+  }
+}
+
+
+// @include font('Raleway', normal, 100, '../fonts/Raleway-Thin.woff2');

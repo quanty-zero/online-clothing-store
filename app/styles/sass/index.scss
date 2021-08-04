@@ -1,0 +1,45 @@
+// MAIN SECTION 
+  
+// general settings and bootstrap
+@import 'config';
+
+// bem
+@import 'blocks/**/*';
+
+// any other styles
+
+//html
+//  //
+
+body {
+  color: $textcolor;
+  position: relative;
+  overflow-x: hidden;
+}
+//::placeholder
+//  color: #666
+//
+//::selection
+//  background-color: $accent
+//  color: #fff
+//
+//input, textarea
+//  outline: none
+//  &:focus:required:invalid
+//    border-color: red
+//    &:required:valid
+//      border-color: green
+//
+//h1, h2, h3, h4, h5, h6
+//  font-weight: 300
+//  color: #000
+//
+// ATOMIC CSS
+
+//.centering-container
+//  display: flex
+//  align-items: center
+//  justify-content: center
+//
+//.boldText
+//  font-weight: bold
