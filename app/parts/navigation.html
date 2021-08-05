@@ -1,32 +1,49 @@
-<nav class="header-navigation body-container">
-  <img src="" alt="Logotype" class="header-navigation__logo">
-
-  <ul class="header-navigation__choise-sex">
-    <li class="header-navigation__button">Женьщинам</li>
-    <li class="header-navigation__button">Мужчинам</li>
-  </ul>
-
-  <ul class="header-navigation__store-categories">
-    <li class="header-navigation__button dropdown-menu__container">
-      Куртки
-      <div class="wrapper">
-        <ul class="dropdown-menu">
-          <li class="dropdown-menu__button">Зимние</li>
-          <li class="dropdown-menu__button">Унисекс</li>
-          <li class="dropdown-menu__button">Демисизонные</li>
-          <li class="dropdown-menu__button">Летние</li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light container-xxl">
+  <div class="container-fluid d-flex justify-content-between">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Женщинам</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Мужчинам</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Куртки
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Куртка 1</a></li>
+          <li><a class="dropdown-item" href="#">Куртка 2</a></li>
+          <li>
         </ul>
-      </div>
-    </li>
-    <li class="header-navigation__button">Плащи</li>
-    <li class="header-navigation__button">Пальто</li>
-    <li class="header-navigation__button">Пуховики</li>
-    <li class="header-navigation__button">Шубы из экомеха</li>
-    <li class="header-navigation__button">Аксессуары</li>
-  </ul>
-
-  <form action="" class="store-search header-navigation__button">
-    <input type="text">
-    <button></button>
-  </form>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Плащи</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Пальто</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Пуховики</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Шубы из экомеха</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Аксессуары</a>
+      </li>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
 </nav>
