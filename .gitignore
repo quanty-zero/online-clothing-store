@@ -6,3 +6,5 @@
 /**/debug.log
 app/css/index.min.css
 app/js/app.min.js
+dist
+app/css/index.css

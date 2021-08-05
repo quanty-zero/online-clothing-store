@@ -64,10 +64,18 @@ function styles() {
 		.pipe(eval(`${preprocessor}glob`)())
 		.pipe(eval(preprocessor)())
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-		//.pipe(cleancss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
 		.pipe(rename({ suffix: ".min" }))
 		.pipe(dest('app/css'))
-		.pipe(browserSync.stream())
+}
+
+function minimaze() {
+	return src([`app/css/*.css`, `!app/css/*.min.css`])
+        .pipe(purgecss({ content: ['dist/index.html', 'app/js/app.min.js'] }))
+        .pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
+        .pipe(cleancss({ level: { 2: { specialComments: 0 } },/* format: 'beautify' */ }))
+        .pipe(rename({ suffix: ".min" }))
+        .pipe(dest('app/css'))
+        .pipe(browserSync.stream())
 }
 
 function images() {
@@ -85,7 +93,7 @@ function buildcopy() {
 		'!app/images/src/**/*',
 		'app/fonts/**/*'
 	], { base: 'app/' })
-	.pipe(dest('dist'))
+		.pipe(dest('dist'))
 }
 
 async function buildhtml() {
@@ -106,7 +114,7 @@ function deploy() {
 			destination: 'yousite/public_html/',
 			// clean: true, // Mirror copy with file deletion
 			include: [/* '*.htaccess' */], // Included files to deploy,
-			exclude: [ '**/Thumbs.db', '**/*.DS_Store' ],
+			exclude: ['**/Thumbs.db', '**/*.DS_Store'],
 			recursive: true,
 			archive: true,
 			silent: false,
@@ -118,13 +126,14 @@ function startwatch() {
 	watch(`app/styles/${preprocessor}/**/*`, { usePolling: true }, styles)
 	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, scripts)
 	watch('app/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}', { usePolling: true }, images)
+	watch('app/**/*.html', { usePolling: true }, buildhtml)
+	watch(['app/css/*.css','!app/css/*.min.css','dist/*.html', 'app/js/*.min.js'], { usePolling: true }, minimaze)
 	watch(`app/**/*.{${fileswatch}}`, { usePolling: true }).on('change', browserSync.reload)
 }
 
-exports.scripts = scripts
 exports.styles  = styles
 exports.images  = images
 exports.deploy  = deploy
-exports.assets  = series(scripts, styles, images)
-exports.build   = series(cleandist, scripts, styles, images, buildcopy, buildhtml)
-exports.default = series(scripts, styles, images, parallel(browsersync, startwatch))
+exports.assets  = series(scripts, buildhtml, styles, minimaze, images)
+exports.build   = series(cleandist, scripts, buildhtml, styles, minimaze, images, buildcopy)
+exports.default = series(scripts, buildhtml, styles, minimaze, images, parallel(browsersync, startwatch))
