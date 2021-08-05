@@ -5,4 +5,13 @@ $font-size-base: .875rem;
 $line-height-base: 1.6;
 
 $text-muted: $muted-text-color;$text-muted: $muted-text-color;
+
+
+// NAVBAR
+
+$navbar-padding-y: unset;
+
+
+// MODULES
+
 @import 'bootstrap-modules/container'
