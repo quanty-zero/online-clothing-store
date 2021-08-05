@@ -63,8 +63,6 @@ function styles() {
 	return src([`app/styles/${preprocessor}/*.*`, `!app/styles/${preprocessor}/_*.*`])
 		.pipe(eval(`${preprocessor}glob`)())
 		.pipe(eval(preprocessor)())
-		.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true }))
-		.pipe(rename({ suffix: ".min" }))
 		.pipe(dest('app/css'))
 }
 
