@@ -6,11 +6,19 @@ $line-height-base: 1.6;
 
 $text-muted: $muted-text-color;$text-muted: $muted-text-color;
 
-
 // NAVBAR
 
 $navbar-padding-y: unset;
 
+// CONTAINER
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 93%,
+  xxl: 1770px
+);
 
 // MODULES
 
