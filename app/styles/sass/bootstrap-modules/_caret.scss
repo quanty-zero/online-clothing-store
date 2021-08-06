@@ -1,0 +1,65 @@
+// scss-docs-start caret-mixins
+@mixin caret-down {
+  content: url(/images/icons/black-right-arrow-button.svg);
+  height: auto;
+  width: auto;
+  transform: rotate(90deg);
+}
+
+@mixin caret-up {
+  content: url(/images/icons/black-right-arrow-button.svg);
+  height: auto;
+  width: auto;
+  transform: rotate(-90deg);
+}
+
+@mixin caret-end {
+  content: url(/images/icons/black-right-arrow-button.svg);
+  height: auto;
+  width: auto;
+  transform: rotate(0deg);
+}
+
+@mixin caret-start {
+  content: url(/images/icons/black-right-arrow-button.svg);
+  height: auto;
+  width: auto;
+  transform: rotate(180deg);
+}
+
+@mixin caret($direction: down) {
+  @if $enable-caret {
+    &::after {
+      display: inline-block;
+      margin-left: $caret-spacing;
+      //vertical-align: $caret-vertical-align;
+      content: "";
+      @if $direction == down {
+        @include caret-down();
+      } @else if $direction == up {
+        @include caret-up();
+      } @else if $direction == end {
+        @include caret-end();
+      }
+    }
+
+    @if $direction == start {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: inline-block;
+        margin-right: $caret-spacing;
+        vertical-align: $caret-vertical-align;
+        content: "";
+        @include caret-start();
+      }
+    }
+
+    &:empty::after {
+      margin-left: 0;
+    }
+  }
+}
+// scss-docs-end caret-mixins
