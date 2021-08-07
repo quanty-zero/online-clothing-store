@@ -1,11 +1,60 @@
 .header {
+  line-height: 2.43;
+  a {
+    padding-top: .4em;
+    padding-bottom: .4em;
+  }
+
 }
 
 @include media-breakpoint-up(xl) {
   .header {
+    &__menu a {
+      padding-left: 0.8em;
+      padding-right: 0.8em;
+    }
+
     // header__info
     &__info {
       flex: 1;
+    }
+
+    &__payment {
+      margin-left: 1.3em;
+      a {
+        padding-left: 1.3em;
+        padding-right: 1.3em;
+      }
+      a::before {
+        margin-right: 0.8em;
+      }
+    }
+
+    &__service {
+      a {
+        padding-left: 1.3em;
+        padding-right: 1.3em;
+      }
+      a::before {
+        margin-right: 0.8em;
+      }
+    }
+
+    &__number {
+      margin-left: auto;
+      a {
+        padding-left: 2em;
+        padding-right: 2em;
+      }
+      a::before {
+        margin-right: 0.5em;
+      }
+    }
+    &__adress {
+      a {
+        padding-left: 2em;
+        padding-right: 2em;
+      }
     }
 
   }
