@@ -1,16 +1,26 @@
 // USER VARIABLES SECTION //
 
-$accent: #7caa43;
+// backgrounds
+$accent-background: #7caa43;
+$success-background: #53902c;
+$danger-background: #e83841;
 
 $light-background: #f2f2f2;
 $dark-background: #1f1f1f;
 
-$light-text-color: #fff;
-$dark-text-color: #1f1f1f;
-$muted-text-color: #757575;
+$light-background-hover: #f5f6f8;
+$dark-background-hover: #2d2d2d;
 
-$background-light-hover: #f5f6f8;
-$background-dark-hover: #2d2d2d;
+// seasons-colors
+$darkViolet-background: #4f424e;
+$gray-background: #313332;
+$darkBlue-background: #253e5e;
+
+// text-colors
+$accent-color: #7caa43;
+$light-color: #fff;
+$dark-color: #1f1f1f;
+$muted-color: #757575;
 
 
 // BOOTSTRAP 

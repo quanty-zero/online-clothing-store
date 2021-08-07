@@ -267,7 +267,7 @@
       &:hover,
       &:focus {
         color: $navbar-dark-hover-color;
-        background-color: $background-dark-hover;
+        background-color: $dark-background-hover;
       }
 
       &.disabled {
@@ -278,7 +278,7 @@
     .show > .nav-link,
     .nav-link.active {
       color: $navbar-dark-active-color;
-      background-color: $background-dark-hover;
+      background-color: $dark-background-hover;
     }
   }
 
