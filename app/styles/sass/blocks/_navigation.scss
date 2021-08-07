@@ -1,0 +1,10 @@
+@include media-breakpoint-up(xl) {
+  .navigation {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    &__content {
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+    }
+  }
+}
