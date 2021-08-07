@@ -5,6 +5,35 @@
     padding-bottom: .4em;
   }
 
+  &__payment {
+    a::before {
+      display: inline-block;
+      content: url(/images/icons/zero-percent.png);
+      height: 2em;
+      width: auto;
+      vertical-align: baseline;
+    }
+  }
+
+  &__service {
+    a::before {
+      display: inline-block;
+      content: url(/images/icons/cut.png);
+      height: 2em;
+      width: auto;
+      vertical-align: sub;
+    }
+  }
+
+  &__call-us {
+    a::before {
+      display: inline-block;
+      content: url(/images/icons/call-answer.png);
+      height: 2em;
+      width: auto;
+      vertical-align: baseline;
+    }
+  }
 }
 
 @include media-breakpoint-up(xl) {
