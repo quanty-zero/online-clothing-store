@@ -1,0 +1,12 @@
+.header {
+}
+
+@include media-breakpoint-up(xl) {
+  .header {
+    // header__info
+    &__info {
+      flex: 1;
+    }
+
+  }
+}
