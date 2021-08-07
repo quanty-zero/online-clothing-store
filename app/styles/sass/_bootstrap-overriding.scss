@@ -18,6 +18,27 @@ $line-height-base: 1.6;
 
 $text-muted: $muted-color;
 
+// scss-docs-start theme-color-variables
+$primary:       $accent-background;
+$success:       $success-background;
+$danger:        $danger-background;
+$light:         $light-background;
+$dark:          $dark-background;
+// scss-docs-end theme-color-variables
+
+// scss-docs-start theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+// scss-docs-end theme-colors-map
+
 // scss-docs-start navbar-theme-variables
 $navbar-dark-color:                 rgba($light-color, .8);
 $navbar-dark-hover-color:           $light-color;

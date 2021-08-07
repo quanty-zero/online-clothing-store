@@ -27,13 +27,13 @@ $muted-color: #757575;
 
 // Необходимые
 @import "node_modules/bootstrap/scss/functions";
-@import 'bootstrap-modules/variables';
-  //@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/variables";
 @import "node_modules/bootstrap/scss/mixins";
-@import "node_modules/bootstrap/scss/utilities";
 
 // Включите здесь переопределения пользовательских переменных по умолчанию
 @import "bootstrap-overriding";
+
+@import "node_modules/bootstrap/scss/utilities";
 
 // Необязательные Layout & components
 @import "node_modules/bootstrap/scss/root";
