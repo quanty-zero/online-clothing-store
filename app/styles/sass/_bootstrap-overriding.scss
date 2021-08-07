@@ -16,17 +16,6 @@ $font-family-base: Raleway, var(--#{$variable-prefix}font-sans-serif);
 $font-size-base: .8125rem;
 $line-height-base: 1.6;
 
-// scss-docs-start theme-color-variables
-$primary:       $accent-background;
-$secondary:     $gray-600 !default;
-$success:       $success-background;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $danger-background;
-$light:         $light-background;
-$dark:          $dark-background;
-// scss-docs-end theme-color-variables
-
 $text-muted: $muted-color;
 
 // scss-docs-start navbar-theme-variables
