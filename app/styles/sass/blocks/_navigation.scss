@@ -1,4 +1,10 @@
+.navigation__wrapper {
+  border-bottom: 2px solid #e2e2e2;
+  margin-bottom: 60px;
+}
+
 .navigation {
+  margin-bottom: -2px;
   &__search {
     input {
       border-radius: 10em;
