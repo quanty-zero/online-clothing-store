@@ -1,3 +1,16 @@
+.navigation {
+  &__search {
+    input {
+      border-radius: 10em;
+    }
+    button {
+      border-radius: 10em;
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
 @include media-breakpoint-up(xl) {
   .navigation {
     flex-direction: row-reverse;
