@@ -1,0 +1,34 @@
+.popular-products-card {
+  position: relative;
+  z-index: 1;
+  > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    padding: 3.54em;
+    h3 {
+      font-size: 24px;
+      margin-bottom: .95em;
+      font-weight: 700;
+    }
+    span {
+      padding: 12px 3em;
+      display: inline-block;
+      border-radius: 10rem;
+      background-color: $darkBlue-background;
+    }
+    h4 {
+      color: white;
+      font-weight: 500;
+      font-size: 21px;
+      margin: 0;
+    }
+  }
+}
