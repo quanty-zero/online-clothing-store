@@ -29,11 +29,58 @@
 
 @include media-breakpoint-up(xl) {
   .navigation {
+    height: 5.45em;
     flex-direction: row-reverse;
     justify-content: flex-end;
+
+    a,
+    .navbar-nav,
+    .nav-item,
+    label {
+      height: 100%;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
     &__content {
+      height: 100%;
       flex-direction: row-reverse;
       justify-content: flex-end;
+      flex: 1;
+    }
+
+    &__links {
+      flex: 1;
+      justify-content: space-evenly;
+    }
+
+    &__choice-sex {
+      label {
+        padding-left: 1em;
+        padding-right: 1em;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &__categories {
+      a {
+        padding-left: 1.8em;
+        padding-right: 1.8em;
+      }
+    }
+
+    &__logotype {
+      padding-left: 0.4em;
+      padding-right: 0.4em;
+    }
+
+    &__search {
+      width: 17.5%;
+      margin-left: 5em;
     }
   }
 }
